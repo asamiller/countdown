@@ -37,7 +37,7 @@ module.exports = React.createClass({
     };
 
     var totalSeconds = Math.floor(this.state.time / INTERVAL_MS);
-    var minutes = Math.floor(totalSeconds / 60);
+    var minutes = Math.floor(Math.abs(totalSeconds / 60));
     var seconds = Math.abs((totalSeconds % 60)) + '';
 
     if (seconds.length == 1) seconds = '0' + seconds;
